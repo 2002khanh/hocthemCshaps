@@ -1,0 +1,8 @@
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\bin\Debug\buoi thu 2.exe.config
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\bin\Debug\buoi thu 2.exe
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\bin\Debug\buoi thu 2.pdb
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\obj\Debug\buoi thu 2.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\obj\Debug\buoi thu 2.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\obj\Debug\buoi thu 2.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\obj\Debug\buoi thu 2.exe
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\buoi thu 2\buoi thu 2\obj\Debug\buoi thu 2.pdb
