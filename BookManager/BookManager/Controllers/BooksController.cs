@@ -15,8 +15,14 @@ namespace BookManager.Controllers
         private Model1 db = new Model1();
 
         // GET: Books
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
+            // tìm kiếm sách
+            var books = db.Books.Select(p => p);
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(p => p.TenSach.Contains(searchString));
+            }    
             return View(db.Books.ToList());
         }
 
@@ -48,11 +54,19 @@ namespace BookManager.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,TenSach,TacGia,NXB")] Book book)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Books.Add(book);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Books.Add(book);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "lỗi nhập dữ liệu "  + ex.Message;
+               
             }
 
             return View(book);

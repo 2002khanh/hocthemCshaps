@@ -5,6 +5,13 @@
 }
 
 <h2>danh sách</h2>
+@using (Html.BeginForm())
+            {
+                <p>
+                    tìm sách : @Html.TextBox("searchString")
+                    <input type="submit" value="tìm" />
+                </p>
+            }    
 
 <p>
     @Html.ActionLink("thêm sách mới", "Create")
