@@ -28,6 +28,7 @@
         public string TacGia { get; set; }
 
         [DisplayName("năm xuất bản")]
+        [DataType(DataType.Date)]
         public DateTime NXB { get; set; }
     }
 }

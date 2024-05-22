@@ -10,7 +10,10 @@ using BookManager.Models;
 
 namespace BookManager.Controllers
 {
-    public class BooksController : Controller
+  
+        public ActionResult Edit([Bind(Include = "ID,TenSach,TacGia,NXB")] Book book)
+        {
+            if (ModelState.IsValid)  public class BooksController : Controller
     {
         private Model1 db = new Model1();
 
@@ -92,9 +95,6 @@ namespace BookManager.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,TenSach,TacGia,NXB")] Book book)
-        {
-            if (ModelState.IsValid)
             {
                 db.Entry(book).State = EntityState.Modified;
                 db.SaveChanges();

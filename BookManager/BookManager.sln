@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManager", "BookManager\BookManager.csproj", "{603CC1A3-97DE-487D-B721-01B0A922D86D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netcorebuoi16", "netcorebuoi16\netcorebuoi16.csproj", "{7C00D042-C108-4960-84CF-AA8097C1B65D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{603CC1A3-97DE-487D-B721-01B0A922D86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{603CC1A3-97DE-487D-B721-01B0A922D86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{603CC1A3-97DE-487D-B721-01B0A922D86D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C00D042-C108-4960-84CF-AA8097C1B65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C00D042-C108-4960-84CF-AA8097C1B65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C00D042-C108-4960-84CF-AA8097C1B65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C00D042-C108-4960-84CF-AA8097C1B65D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\baithuchanhnetcore16.props" />
+</Project>
