@@ -9,10 +9,8 @@ namespace congnhan.DTO
   public class NhanVien
     {
 
-        public int NhanVienId { get; set; }
         public string?  HoTen  { get; set; }
         public string? ChuyenMay { get; set; }
 
-        public ICollection<CongViec> CongViecs { get; set; }
     }
 }
