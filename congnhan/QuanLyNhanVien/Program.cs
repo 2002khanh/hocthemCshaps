@@ -139,12 +139,12 @@ class program
             case "1":
                 Console.Write("Nhập tên nhân viên: ");
                 var ten = Console.ReadLine();
-                query = query.Where(predicate: nv => nv.HoTen.Contains(ten));
+                query = query.Where(nv => nv.HoTen.Contains(ten));
                 break;
             case "2":
                 Console.Write("Nhập chuyền may: ");
                 var chuyenMay = Console.ReadLine();
-                query = query.Where(predicate: nv => nv.ChuyenMay.Contains(chuyenMay));
+                query = query.Where( nv => nv.ChuyenMay.Contains(chuyenMay));
                 break;
             default:
                 Console.WriteLine("Lựa chọn không hợp lệ");
@@ -161,19 +161,19 @@ class program
     static void XuatBaoCao(NhanViencm context)
     {
         var baoCao = context.NhanViens
-            .Include(nv => nv.CongViecs)
+            .GroupBy(nv => nv.HoTen)
             .Select(nv => new
             {
-                nv.HoTen,
-                nv.ChuyenMay,
-                TongSoLuong = nv.CongViecs.Sum(cv => cv.SoLuong)
-            })
+                Hoten = nv.Key,
+             ChuyenMay = nv.Key,
+                
+            }) 
             .ToList();
 
         Console.WriteLine("Báo cáo:");
         foreach (var item in baoCao)
         {
-            Console.WriteLine($"Tên: {item.HoTen}, Chuyền may: {item.ChuyenMay}, Tổng số lượng: {item.TongSoLuong}");
+            Console.WriteLine($"Tên: {item.Hoten}, Chuyền may: {item.ChuyenMay}");
         }
     }
 }

@@ -11,8 +11,8 @@ namespace congnhan.Dbcontext
     public class NhanViencm : Microsoft.EntityFrameworkCore.DbContext
     {
 
-        public DbSet<NhanVien> NhanViens { get; set; }
-        public DbSet<CongViec> CongViecs { get; set; }
+        public virtual DbSet<NhanVien> NhanViens { get; set; }
+    
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=LAPTOP-4TLO7DBL\\SQLEXPRESS01;Initial Catalog=NhanVien;Integrated Security=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;TrustServerCertificate=True");
