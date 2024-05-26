@@ -10,13 +10,12 @@ namespace congnhan.DTO
 {
   public class NhanVien
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        
         public int NhanVienId { get; set; }
-        [MaxLength(100)]
+     
 
         public string?  HoTen  { get; set; }
-        [MaxLength(100)]
+   
 
         public string? ChuyenMay { get; set; }
         public int SoLuong { get; set; }
