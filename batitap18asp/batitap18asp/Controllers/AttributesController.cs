@@ -58,6 +58,7 @@ namespace batitap18asp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AttributeId,AttributeName,Quantity,Price,PriceSale")] Attribute attribute)
         {
+           
             if (ModelState.IsValid)
             {
                 _context.Add(attribute);
@@ -67,6 +68,18 @@ namespace batitap18asp.Controllers
             return View(attribute);
         }
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("AttributeId,AttributeName,Quantity,Price,PriceSale")] Attribute attribute)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(attribute);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(attribute);
+        //}
         // GET: Attributes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

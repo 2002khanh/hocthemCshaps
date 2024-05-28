@@ -34,5 +34,34 @@
 </div>
 
 @section Scripts {
+   @* <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnSave").click(function () {
+                var prod = {};
+                prod.ProductName = $("#ProductName").val();
+                prod.ProductType = $("#ProductType").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("/Create")',
+                    data: '{prod:' + JSON.stringify(prod) + '}',
+                    dataType: "json",
+                    contenType: "application/json;charset=utf-8",
+                    success: function (response) {
+                        if (response.result == true) {
+                            $("#msg").html("thêm dữ liệu thành công ");
+
+                        } else {
+                            $("#msg").html(response.error);
+                        }
+                    },
+                    error: function (reponse) {
+                        alert("lỗi thêm dữ liệu");
+                    }
+                })
+                return false;
+            });
+        });
+    </script>*@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
