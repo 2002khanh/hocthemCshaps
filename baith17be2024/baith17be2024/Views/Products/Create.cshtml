@@ -54,7 +54,8 @@
         $(document).ready(function () {
             $("#btnSave").click(function () {
                 var prod = {};
-                   
+                    prod.ProductName = $("#ProductName").val();
+                    prod.ProductType = $("#ProductType").val();
                
                 $.ajax({
                     type: "POST",
