@@ -1,0 +1,5 @@
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\SanphamdataAccessnetcore\obj\Debug\net6.0\SanphamdataAccessnetcore.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\SanphamdataAccessnetcore\obj\Debug\net6.0\SanphamdataAccessnetcore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\SanphamdataAccessnetcore\obj\Debug\net6.0\SanphamdataAccessnetcore.AssemblyInfoInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\SanphamdataAccessnetcore\obj\Debug\net6.0\SanphamdataAccessnetcore.AssemblyInfo.cs
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\SanphamdataAccessnetcore\obj\Debug\net6.0\SanphamdataAccessnetcore.csproj.CoreCompileInputs.cache

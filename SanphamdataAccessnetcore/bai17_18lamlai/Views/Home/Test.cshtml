@@ -1,0 +1,22 @@
+﻿﻿@model List<bai17_18lamlai.Models.BookModels>
+<p>Đây là dữ liệu được lấy từu AJAX</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>BookName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BookID</td>
+                    <td>@item.BookName</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

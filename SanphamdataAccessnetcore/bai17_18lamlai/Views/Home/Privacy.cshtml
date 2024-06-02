@@ -1,0 +1,123 @@
+﻿﻿<div class="form-group" style="padding-bottom: 60px;">
+    <label for="Title" class="control-label col-md-3">Ảnh sản phẩm:<span class="required">*</span></label>
+    <div class="col-md-6">
+        <div class="input-icon right">
+            <input id="upload" class="form-control" type="file" name="upload" accept="image/*" multiple="multiple" />
+            <p style="color:red">Chọn từ 1 - 3 ảnh sản phẩm</p>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="Title" class="control-label col-md-3">ảnh đã chọn:<span class="required">*</span></label>
+    <div class="col-md-6">
+        <div class="input-icon right">
+            <div id="dvPreview">
+            </div>
+            <div id="divAddMoreImage" style="display:none;">
+                <input type="file" id="fileaddMore" style="display:none">
+                <a style="cursor:pointer;" onclick="openFileOption();"><i class="fa fa-plus-circle"></i>Thêm ảnh</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="form-group">
+    <label for="Title" class="control-label col-md-3">@*Nhóm phân loại :<span class="required">*</span>*@</label>
+    <div class="col-md-9">
+        <div class="input-icon right">
+            <div class="col-md-2">
+                <input type="text" id="txtProductClassifyName_0" value="" class="form-control" placeholder="Tên phân loại" />
+            </div>
+            <div class="col-md-2">
+                <input type="text" id="txtProductClassifyPrice_0" onkeypress="Utils.CheckOnlyNumber(this, event)" onkeyup="FormatCurrency(this);" value="" class="form-control" placeholder="giá bán" />
+            </div>
+            <div class="col-md-2">
+                <input type="text" id="txtProductClassifySalePrice_0" onkeypress="Utils.CheckOnlyNumber(this, event)" onkeyup="FormatCurrency(this);" value="" class="form-control" placeholder="giá sale" />
+            </div>
+            <div class="col-md-2">
+                <input type="text" id="txtProductClassifySKU_0" value="" class="form-control" placeholder="SKU" />
+            </div>
+            <div class="col-md-2">
+                <a style="cursor:pointer;" onclick="ProductClassify_Add()"><i class="fa fa-plus-circle"></i>Thêm phân loại</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    $('#upload').on('change', function () {
+        statusEditAva = 1;
+        if (typeof (FileReader) != "undefined") {
+            var dvPreview = $("#dvPreview");
+            dvPreview.html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            var index = 0;
+            $($(this)[0].files).each(function () {
+                var file = $(this);
+                if (regex.test(file[0].name.toLowerCase())) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var img = $("<img class='img_" + index + "'/> <span id='span_img_" + index + "'><a onclick='RemoveProductImage(" + index + ")'>Xóa</a></span> <br/>");
+                        img.attr("style", "height:250px;width: 250px");
+                        img.attr("src", e.target.result);
+                        //  console.log(e.target.result);
+                        dvPreview.append(img);
+                        index++;
+                    }
+                    reader.readAsDataURL(file[0]);
+                } else {
+                    alert(file[0].name + " is not a valid image file.");
+                    dvPreview.html("");
+                    return false;
+                }
+
+
+            });
+            $("#divAddMoreImage").show();
+        } else {
+            alert("This browser does not support HTML5 FileReader.");
+        }
+    });
+
+
+    function ProductClassify_Add() {
+        var index_count = [];
+        $(".ProductClassify .form-group").each(function (index, value) {
+            index_count.push(index);
+        });
+        console.log(index_count.length);
+        var item_index = index_count.length;
+        console.log("item_index:" + item_index);
+        var html = "";
+        html += "<div class=\"form-group\" id=\"fgProductClassify_" + item_index + "\">";
+        html += " <label for=\"Title\" class=\"control-label col-md-3\"></label>";
+        html += "<div class=\"col-md-9\">";
+        html += "<div class=\"input-icon right\">";
+        html += "<div class=\"col-md-2\">";
+        html += "<input type=\"text\" id=\"txtProductClassifyName_" + item_index + "\" value=\"\" class=\"form-control\" placeholder=\"Tên phân loại\" />";
+        html += "</div>";
+        html += " <div class=\"col-md-2\">";
+        html += "<input type=\"text\" id=\"txtProductClassifyPrice_" + item_index + "\" onkeypress=\"Utils.CheckOnlyNumber(this, event)\" onkeyup=\"FormatCurrency(this);\" value=\"\" class=\"form-control\" placeholder=\"giá bán\" />";
+        html += "</div>";
+        html += "<div class=\"col-md-2\">";
+        html += "<input type=\"text\" id=\"txtProductClassifySalePrice_" + item_index + "\" onkeypress=\"Utils.CheckOnlyNumber(this, event)\" onkeyup=\"FormatCurrency(this);\" value=\"\" class=\"form-control\" placeholder=\"giá sale\" />";
+        html += "</div>";
+        html += "<div class=\"col-md-2\">";
+        html += "<input type=\"text\" id=\"txtProductClassifySKU_" + item_index + "\" value=\"\" class=\"form-control\" placeholder=\"SKU\" />";
+        html += "</div>";
+        html += "<div class=\"col-md-2\">";
+        html += "<a style=\"cursor:pointer;\" onclick=\"ProductClassify_Delete(" + item_index + ")\"><i class=\"fa fa-trash-o\"></i>Xóa phân loại</a>";
+        html += "</div>";
+        html += "</div>";
+        html += "</div>";
+
+        html += "</div>";
+
+        $(".ProductClassify").append(html);
+    }
+</script>

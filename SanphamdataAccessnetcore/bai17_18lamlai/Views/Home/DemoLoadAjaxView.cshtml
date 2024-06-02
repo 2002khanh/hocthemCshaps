@@ -1,0 +1,49 @@
+﻿﻿@model List<EBook.DataAccess.NetCore.DTO.Product>
+<p>Đây là dữ liệu đc gọi từ AJAX</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>ProductName</th>
+            <th>Hành động</th>
+            <th>Mua</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr class="product_index_@item.ProductID">
+                    <td>@item.ProductID</td>
+                    <td>@item.ProductName</td>
+                    <td>
+                        <a data-productid="@item.ProductID" onclick="Product_Delete(@item.ProductID)">
+                            <i class="fa fa-trash">Xóa</i>
+                        </a>
+                        |
+
+                    </td>
+                    <td>
+
+                        @if (item.productAttributes != null && item.productAttributes.Count > 0)
+                        {
+                            <input type="text" placeholder="số lượng mua" class="form-control" id="txtBuyQuantity_@item.ProductID" />
+                            <input type="text" placeholder="địa chỉ nhận " class="form-control" id="txtShippingAddress_@item.ProductID" />
+                            <select class="form-control" id="ddlBienThe_@item.ProductID">
+
+                                @foreach (var item_attr in item.productAttributes)
+                                {
+                                    <option value="@item_attr.PriceSale">@item_attr.AttributeName</option>
+                                }
+
+                            </select>
+                            <a onclick="BuyProduct(@item.ProductID)">Đặt hàng</a>
+                        }
+
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

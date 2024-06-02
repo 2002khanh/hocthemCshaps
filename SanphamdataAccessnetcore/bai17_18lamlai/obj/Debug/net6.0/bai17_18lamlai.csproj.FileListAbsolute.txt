@@ -1,0 +1,8 @@
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.AssemblyInfoInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.AssemblyInfo.cs
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.RazorAssemblyInfo.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\SanphamdataAccessnetcore\bai17_18lamlai\obj\Debug\net6.0\bai17_18lamlai.RazorAssemblyInfo.cs
