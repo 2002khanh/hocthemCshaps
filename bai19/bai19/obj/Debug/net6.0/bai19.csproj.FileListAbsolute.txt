@@ -1,0 +1,8 @@
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.csproj.AssemblyReference.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.AssemblyInfoInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.AssemblyInfo.cs
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.csproj.CoreCompileInputs.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.RazorAssemblyInfo.cache
+C:\Users\ACER\OneDrive\be_2204hocthemasp\ConsoleApp1\bai19\bai19\obj\Debug\net6.0\bai19.RazorAssemblyInfo.cs
